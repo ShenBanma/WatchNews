@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--BaM新闻-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="BaM新闻" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchNewsDemo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="DSi-xR-gbd">
+                            <items>
+                                <tableRow identifier="NewsRow" id="pJM-8D-bAW" customClass="NewsRow" customModule="WatchNewsDemo_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="PKh-9g-S2t">
+                                        <items>
+                                            <label alignment="left" text="titile" numberOfLines="0" id="usg-Ro-KFQ">
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                            <label alignment="left" text="date" id="O2H-lG-wTy">
+                                                <fontDescription key="font" type="system" pointSize="8"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="labelDate" destination="O2H-lG-wTy" id="rrb-d4-Tc9"/>
+                                        <outlet property="labelTitle" destination="usg-Ro-KFQ" id="JCu-nc-vAj"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="ImageNewsRow" id="NII-nN-8lk" customClass="ImageNewsRow" customModule="WatchNewsDemo_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="HdT-wk-QQN">
+                                        <items>
+                                            <imageView width="40" height="40" alignment="left" verticalAlignment="center" id="7J6-s3-wlL"/>
+                                            <group width="80" alignment="center" verticalAlignment="center" layout="vertical" id="JFg-Ua-zrZ">
+                                                <items>
+                                                    <label alignment="left" text="titile" numberOfLines="0" id="t6F-zC-VvH">
+                                                        <color key="textColor" red="0.9450981021" green="0.97254908080000002" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                    </label>
+                                                    <label alignment="left" text="date" id="dv6-3i-1C6">
+                                                        <fontDescription key="font" type="system" pointSize="8"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="imageNews" destination="7J6-s3-wlL" id="jc8-Xo-gWi"/>
+                                        <outlet property="labelDate" destination="dv6-3i-1C6" id="qlL-T2-f76"/>
+                                        <outlet property="labelTitle" destination="t6F-zC-VvH" id="kZm-ME-a1b"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label alignment="center" verticalAlignment="center" text="加载数据中 别走开" id="o5l-MA-78j">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="labelRemind" destination="o5l-MA-78j" id="eW2-po-xL1"/>
+                        <outlet property="table" destination="DSi-xR-gbd" id="8qg-gt-3IM"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+        <!--详细信息-->
+        <scene sceneID="E74-iD-eNt">
+            <objects>
+                <controller identifier="NextController" title="详细信息" id="bQj-Kf-mNr" customClass="NextInterfaceController" customModule="WatchNewsDemo_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="title" numberOfLines="0" id="tqK-fu-bur">
+                            <color key="textColor" red="0.9450981021" green="0.97254908080000002" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </label>
+                        <label alignment="left" text="Label" numberOfLines="0" id="Q5y-lV-3v7">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="labelContext" destination="Q5y-lV-3v7" id="Lr2-Zt-MdW"/>
+                        <outlet property="labelTitle" destination="tqK-fu-bur" id="uRr-06-f0C"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="520" y="367"/>
+        </scene>
+    </scenes>
+</document>
